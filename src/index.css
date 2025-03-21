@@ -1,0 +1,107 @@
+.container-fluid {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.username {
+  font-size: 1.5rem;
+  color: #6c757d;
+  text-align: left;
+}
+
+.profile-pic {
+  width: 50px; /* Adjust the size */
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #f8f9fa;
+}
+
+.profile-pic-new {
+  width: 200px; /* Adjust the size */
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #f8f9fa;
+}
+
+.my-profile-title {
+  font-size: 2rem; /* Title size adjustment */
+  color: #343a40;
+  text-align: left;
+}
+
+.event-stats {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Shadow effect */
+.shadow-sm {
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.99);
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+/* Button styles */
+.btn {
+  font-size: 1rem; /* Adjust button text size */
+}
+
+/* Center the text within the columns */
+.event-stats {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Align text properly */
+.text-center h4 {
+  margin-bottom: 5px;
+}
+
+/* Additional class for aligning buttons */
+.align-items-center {
+  align-items: center;
+}
+
+/* Nav link */
+.nav-link {
+  text-transform: capitalize;
+}
+
+/* Active tab styles */
+.nav-tabs .nav-item .nav-link.active {
+  color: var(--bs-secondary) !important; /* If active, the color is Primary color */
+}
+
+/* Default (non-active) tab styles */
+.nav-tabs .nav-item .nav-link {
+  color: var(--bs-primary) !important; /* If not active, the color is Secondary color */
+}
+
+@media (max-width: 768px) {
+  .profile-pic-new {
+      width: 150px; /* Adjust size for mobile */
+      height: 150px;
+  }
+
+  .username {
+      font-size: 1.2rem; /* Adjust font size for mobile */
+  }
+
+  .my-profile-title {
+      font-size: 1.5rem; /* Adjust title size for mobile */
+  }
+
+  .btn {
+      font-size: 0.9rem; /* Adjust button text size for mobile */
+  }
+}
