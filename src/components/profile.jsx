@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button } from "react-bootstrap";
+import { Modal, Button, Toast } from "react-bootstrap";
 import '../index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -49,11 +49,11 @@ export default function Profile() {
 
                     { isModalOpen && (
                         <div className="modal-container">
-                            <button onClick={() => alert("Profile Clicked")} className="modal-button">
+                            <button className="modal-button">
                                 👤 Profile
                             </button>
                             <hr className="modal-divider" />
-                            <button onClick={() => alert("Settings Clicked")} className="modal-button">
+                            <button className="modal-button">
                                 🚪 Log Out
                             </button>
                         </div>
@@ -167,7 +167,7 @@ export default function Profile() {
                                                     </Modal.Header>
                                                     <Modal.Body className="text-center">
                                                         <img
-                                                            src="/path-to-your-image/image.png"  // Update this path accordingly
+                                                            src="/images/cert_of_picpa.png"  // Update this path accordingly
                                                             alt="Good Standing Certificate"
                                                             style={{ width: "100%", height: "auto", border: "1px solid #ddd", borderRadius: "8px" }}
                                                         />
@@ -200,8 +200,8 @@ export default function Profile() {
                                                             {/* Left Section - Payment Method */}
                                                             <div style={{ flex: 1, marginRight: "20px" }}>
                                                                 <h5>Payment Method</h5>
-                                                                <div style={{ border: "1px solid #ccc", padding: "15px", borderRadius: "8px", textAlign: "center" }}>
-                                                                    <img src="/path-to-your-image/image.png" alt="Bank Transfer" style={{ width: "100px", marginBottom: "10px" }} />
+                                                                <div style={{ border: "1px solid #ccc", padding: "15px", borderRadius: "8px", }}>
+                                                                    <img src="/images/bank_transfer_icon.png" alt="Bank Transfer" style={{ width: "100px", marginBottom: "10px" }} />
                                                                     <h6>Bank Transfer</h6>
                                                                     <p>Proof of bank transfer (.png, .jpeg, .pdf)</p>
                                                                     <p><strong>Bank:</strong> Union Bank of the Philippines</p>
@@ -224,7 +224,7 @@ export default function Profile() {
                                                     </Modal.Body>
                                                     <Modal.Footer>
                                                         <Button variant="secondary" onClick={() => setShowEIDModal(false)}>Back</Button>
-                                                        <Button variant="primary">Checkout</Button>
+                                                        <Button variant="primary" onClick={() => alert("You must include a proof of payment if you selected Credit Card")}>Checkout</Button>
                                                     </Modal.Footer>
                                                 </Modal>
                                             </ul>
